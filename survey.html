@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Agriculture Usage Survey Form</title>  
+</head>
+<style>
+    body{
+        text-align: justify;
+    }
+    form{
+        border: 1px solid black;
+        width: 700px;
+        height: 600px;
+        padding: 10px;
+        margin: auto;
+        border-radius: 10px;
+        font-family: 'Courier New', Courier, monospace;
+    }
+    h1{
+        text-align: center;
+        color: blue;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+    label{
+        color: aqua;
+    }
+    input{
+        color: yellow;
+    }
+</style>
+<body>
+  <h1><u>Agriculture Usage Survey</u></h1>  
+  <form>
+    <label for="name">Farmer's Name:</label>
+    <input type="text" id="name" name="name" placeholder="Enter your name" required><br><br>
+    <label for="age">Age:</label>
+    <input type="number" id="age" name="age" min="18" max="100"><br><br>
+    <label for="email">Email ID:</label>
+    <input type="email" id="email" name="email" placeholder="Enter your email"><br><br>
+    <label for="contact">Contact Number:</label>
+    <input type="tel" id="contact" name="contact" placeholder="Enter phone number"><br><br>
+    <label>Do you own farmland?</label>
+    <input type="radio" name="ownership" value="Yes"> Yes
+    <input type="radio" name="ownership" value="No"> No<br><br>
+    <label>What crops do you cultivate? (Select all that apply):</label><br>
+    <input type="checkbox" name="crops" value="Rice"> Rice
+    <input type="checkbox" name="crops" value="Wheat"> Wheat
+    <input type="checkbox" name="crops" value="Maize"> Maize
+    <input type="checkbox" name="crops" value="Pulses"> Pulses
+    <input type="checkbox" name="crops" value="Vegetables"> Vegetables
+    <input type="checkbox" name="crops" value="Fruits"> Fruits<br><br>
+    <label for="irrigation">Type of Irrigation Used:</label>
+    <select id="irrigation" name="irrigation">
+      <option value="Canal">Canal</option>
+      <option value="Tube Well">Tube Well</option>
+      <option value="Drip Irrigation">Drip Irrigation</option>
+      <option value="Rainfed">Rainfed</option>
+    </select><br><br>
+    <label for="sowing">Last Sowing Date:</label>
+    <input type="date" id="sowing" name="sowing"><br><br>
+    <label for="file">Upload Your Land Document (optional):</label>
+    <input type="file" id="file" name="file"><br><br>
+    <label for="fertilizer">Fertilizer Usage Level (1-10):</label>
+    <input type="range" id="fertilizer" name="fertilizer" min="1" max="10"><br><br>
+    <label for="favcolor">Choose a color representing your farm:</label>
+    <input type="color" id="favcolor" name="favcolor"><br><br>
+    <label for="feedback" >Additional Feedback / Suggestions:</label>
+    <textarea id="feedback" name="feedback" rows="4" placeholder="Write here..."></textarea><br><br>
+    <input type="submit" value="Submit Survey">
+    <input type="reset" value="Reset Form">
+  </form>
+</body>
+</html>
