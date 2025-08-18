@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Canvas Simple Shapes</title>
+</head>
+<body>
+  <canvas id="board" width="1100" height="400" style="border:5px solid #000;"></canvas>
+
+  <script>
+    var canvas = document.getElementById('board');
+    var ctx = canvas.getContext('2d');
+
+    function toRadians(deg) {
+      return deg * (3.14159 / 180);
+    }
+
+    // 1) Rectangle
+    ctx.strokeRect(30, 30, 100, 70);
+
+    // 2) Circle
+    ctx.beginPath();
+    ctx.arc(200, 70, 40, 0, toRadians(360));
+    ctx.stroke();
+
+    // 3) Line
+    ctx.beginPath();
+    ctx.moveTo(300, 30);
+    ctx.lineTo(380, 100);
+    ctx.stroke();
+
+    // 4) Triangle
+    ctx.beginPath();
+    ctx.moveTo(450, 100);
+    ctx.lineTo(500, 30);
+    ctx.lineTo(550, 100);
+    ctx.closePath();
+    ctx.stroke();
+
+    // 5) Pentagon
+    ctx.beginPath();
+    for (var i = 0; i < 5; i++) {
+      var angle = toRadians(i * 72 - 90);
+      var x = 700 + 50 * Math.cos(angle);
+      var y = 70 + 50 * Math.sin(angle);
+      if (i === 0) ctx.moveTo(x, y);
+      else ctx.lineTo(x, y);
+    }
+    ctx.closePath();
+    ctx.stroke();
+
+    // 10) Star
+    ctx.beginPath();
+    for (var j = 0; j < 10; j++) {
+      var r = j % 2 === 0 ? 50 : 20;
+      var angleStar = toRadians(j * 36 - 90);
+      var sx = 850 + r * Math.cos(angleStar);
+      var sy = 180 + r * Math.sin(angleStar);
+      if (j === 0) ctx.moveTo(sx, sy);
+      else ctx.lineTo(sx, sy);
+    }
+    ctx.closePath();
+    ctx.stroke();
+  </script>
+  <p style="text-align: center;color: springgreen;font-size: 30px;"><u>Canvas Shapes</u></p>
+</body>
+</html>
