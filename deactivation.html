@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Account Deactivation</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+    h1 {
+      text-align: center;
+      color: #e53935;
+      margin-top: 40px;
+      margin-bottom: 20px;
+      padding: 10px 20px;
+      border-radius: 8px;
+      width: 60%;
+      margin: auto;
+    }
+    form {
+      border: 2px solid #e53935;
+      padding: 20px;
+      width: 400px;
+      margin: 0 auto;
+      border-radius: 8px;
+    }
+    input[type="text"],
+    input[type="email"],
+    select,
+    textarea {
+      width: 100%;
+      padding: 8px;
+      margin-top: 6px;
+      margin-bottom: 16px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    textarea {
+      resize: vertical;
+    }
+    input[type="checkbox"] {
+      margin-right: 8px;
+    }
+    input[type="submit"] {
+      background-color: #e53935;
+      color: white;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 4px;
+      font-size: 16px;
+      width: 100%;
+    }
+    input[type="submit"]:hover {
+      background-color: #d32f2f;
+    }
+  </style>
+</head>
+<body>
+  <h1>Account Deactivation</h1>
+  <form action="deactivate.php" method="post">
+    <label for="name">Full Name:</label>
+    <input type="text" id="name" name="name" required>
+    <label for="email">Email Address:</label>
+    <input type="email" id="email" name="email" required>
+    <label for="reason">Reason for Deactivation:</label>
+    <select id="reason" name="reason" required>
+      <option value="" disabled selected>Select a reason</option>
+      <option value="not_useful">I no longer find this useful</option>
+      <option value="privacy">Privacy concerns</option>
+      <option value="duplicate">I have another account</option>
+      <option value="temporary">Temporary break</option>
+      <option value="other">Other</option>
+    </select>
+    <label for="comments">Additional Comments:</label>
+    <textarea id="comments" name="comments" rows="4" placeholder="Optional..."></textarea>
+    <label for="Confirm"></label>
+      <input type="checkbox" id="confirm" name="confirm" required>
+      I confirm I want to deactivate my account.
+    <br><br>
+    <input type="submit" value="Deactivate Account">
+  </form>
+</body>
+</html>
