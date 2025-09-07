@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript Events </title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 30px;
+      background-image: url(anupama.webp);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-attachment: fixed;
+      background-position: center;
+    }
+    #box {
+      width: 300px;
+      height: 300px;
+      background-color: lightblue;
+      margin: 20px auto;
+      margin-top: 350px;
+      border-radius: 10px;
+      line-height: 200px;
+      font-weight: bold;
+      transition: background-color 0.3s;
+      cursor: pointer;
+    }
+    #output {
+      margin-top: 20px;
+      font-size: 1.2em;
+      color: blue;
+      text-decoration:line-through;
+      font-size: 40px;
+    }
+    h1{
+        color: red;
+    }
+  </style>
+</head>
+<body>
+  <h1><u>JavaScript Events </u></h1>
+  <p style="color: green;">Try hovering, clicking the box, or resizing the window!</p>
+  <div id="box">Click Me</div>
+  <p id="output">Events output will appear here...</p>
+  <script>
+    const box = document.getElementById("box");
+    const output = document.getElementById("output");
+    box.addEventListener("mouseover", () => {
+    box.style.backgroundColor = "orange";
+    output.style.color = "blue";  
+    output.innerText = "Mouse is over the box!";
+    });
+    box.addEventListener("mouseout", () => {
+    box.style.backgroundColor = "lightblue";
+    output.style.color = "blue";   
+    output.innerText = "Mouse left the box!";
+    });
+    box.addEventListener("click", () => {
+        output.style.colorblue;
+      output.innerText = "Box clicked!";
+    });
+    window.addEventListener("load", () => {
+    output.style.color = "blue";  
+    output.innerText = "Page fully loaded!";
+    });
+    window.addEventListener("resize", () => {
+    output.style.color = "blue";   
+    output.innerText = `Window resized to: ${window.innerWidth} x ${window.innerHeight}`;
+    });
+  </script>
+</body>
+</html>
