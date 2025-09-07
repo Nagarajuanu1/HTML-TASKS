@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Wine Prediction</title>
+    <style>
+        h1 {
+            text-align: center;
+            font-size: 3.5em;
+        }
+        form {
+            text-align: center;
+        }
+        label {
+            width: 250px;
+            margin-bottom: 15px;
+            display: inline-block;
+            font-weight: bold;
+        }
+        footer {
+            text-align: center;
+            font-size: 5em;
+            color: yellow;
+            background-color: black;
+            display: inline-block;
+            padding: 5px 15px;
+        }
+        p {
+            font-weight: bolder;
+            font: 1em sans-serif;
+            font-size: xx-large;
+        }
+        @media screen and (max-width: 600px) {
+            h1 {
+                font-size: 2em;
+            }
+            form {
+                width: 100%;
+                padding: 10px;
+            }
+            label {
+                width: 100%;
+                text-align: left;
+                margin-bottom: 8px;
+            }
+            input[type="number"], input[type="submit"] {
+                width: 90%;
+                padding: 8px;
+                margin-bottom: 12px;
+                font-size: 1em;
+            }
+            div {
+                float: none !important;
+                width: 100%;
+                margin: 0 auto;
+                text-align: center;
+            }
+            img {
+                width: 200px !important;
+                height: 200px !important;
+                margin: 0 auto;
+            }
+            p {
+                font-size: large;
+            }
+        }
+        @media screen and (min-width: 601px) and (max-width: 1024px) {
+            h1 {
+                font-size: 2.5em;
+            }
+            form {
+                width: 80%;
+                margin: auto;
+            }
+            input[type="number"], input[type="submit"] {
+                width: 70%;
+                padding: 10px;
+                margin-bottom: 15px;
+            }
+            div {
+                width: 60%;
+                margin: 0 auto;
+                float: none;
+            }
+            img {
+                width: 250px !important;
+                height: 250px !important;
+            }
+        }
+        @media screen and (min-width: 1025px) {
+            div {
+                float: right;
+                text-align: center;
+                width: 300px;
+                margin-right: 20%;
+            }
+            img {
+                height: 300px;
+                width: 300px;
+                border-radius: 50%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <img src="wine image.webp" style="border-radius: 50%;">
+        <p><strong>"Bad Quality"</strong> Wine</p>
+    </div>
+    <h1 style="color: yellowgreen;"><u><b>Wine Quality Prediction App</b></u></h1>
+    <form>
+        <label for="enterfixedacidity">Enter Fixed Acidity:</label>
+        <input type="number" id="enterfixedacidity" name="enterfixedacidity"><br>
+        <label for="entervolatileacidity">Enter Volatile Acidity:</label>
+        <input type="number" id="entervolatileacidity" name="entervolatileacidity"><br>
+        <label for="entercitricacid">Enter Citric Acid:</label>
+        <input type="number" id="entercitricacid" name="entercitricacid"><br>
+        <label for="enterresidualsugar">Enter Residual Sugar:</label>
+        <input type="number" id="enterresidualsugar" name="enterresidualsugar"><br>
+        <label for="enterchlorides">Enter Chlorides:</label>
+        <input type="number" id="enterchlorides" name="enterchlorides"><br>
+        <label for="enterfreesulfurdioxide">Enter Free Sulfur Dioxide:</label>
+        <input type="number" id="enterfreesulfurdioxide" name="enterfreesulfurdioxide"><br>
+        <label for="entertotalsulfurdioxide">Enter Total Sulfur Dioxide:</label>
+        <input type="number" id="entertotalsulfurdioxide" name="entertotalsulfurdioxide"><br>
+        <label for="enterdensity">Enter Density:</label>
+        <input type="number" id="enterdensity" name="enterdensity" step="0.0001"><br>
+        <label for="enterph">Enter pH:</label>
+        <input type="number" id="enterph" name="enterph" step="0.01"><br>
+        <label for="entersulphates">Enter Sulphates:</label>
+        <input type="number" id="entersulphates" name="entersulphates" step="0.01"><br>
+        <label for="enteralcohol">Enter Alcohol:</label>
+        <input type="number" id="enteralcohol" name="enteralcohol" step="0.1"><br>
+        <input type="submit" value="Submit" style="cursor: pointer;font-weight: bold;"> <br>
+    </form><br>
+</body>
+</html>
