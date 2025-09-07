@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Simple Calculator</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f0f0f0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-image: url(bleach2.webp);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      background-attachment: fixed;
+    }
+    .calculator {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    }
+    #result {
+      width: 100%;
+      height: 50px;
+      text-align: right;
+      margin-bottom: 15px;
+      font-size: 1.5em;
+      padding: 5px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    .buttons {
+      display: grid;
+      grid-template-columns: repeat(4, 70px);
+      grid-gap: 10px;
+    }
+    button {
+      height: 50px;
+      font-size: 1.2em;
+      font-weight: bold;
+      cursor: pointer;
+      border: none;
+      border-radius: 5px;
+      background: #ddd;
+      transition: background 0.2s;
+    }
+    button:hover {
+      background: #bbb;
+    }
+    .equal {
+      grid-column: span 2;
+      background: orange;
+      color: white;
+    }
+    .equal:hover {
+      background: darkorange;
+    }
+    .bleach{
+        position: absolute;
+        right: 500px;
+        top: 240px;
+        bottom: 50px;
+        font-size: 30px;
+        color: red;
+        text-decoration: line-through;
+    }
+    .cal{
+        position: absolute;
+        right: 300px;
+        top: 100px;
+        bottom: 50px;
+        color: red;
+        font-size: 30px;
+        text-decoration: line-through;
+    }
+  </style>
+</head>
+<body>
+    <h1 style="color: blue;position: absolute;top: 100px;left: 640px; "><u>ICHIGO KUROSAKI</u></h1>
+  <div class="calculator">
+    <input type="text" id="result" disabled>
+    <div class="buttons">
+      <button onclick="clearResult()">C</button>
+      <button onclick="deleteChar()">DEL</button>
+      <button onclick="appendValue('%')">%</button>
+      <button onclick="appendValue('/')">/</button>
+      <button onclick="appendValue('7')">7</button>
+      <button onclick="appendValue('8')">8</button>
+      <button onclick="appendValue('9')">9</button>
+      <button onclick="appendValue('*')">*</button>
+      <button onclick="appendValue('4')">4</button>
+      <button onclick="appendValue('5')">5</button>
+      <button onclick="appendValue('6')">6</button>
+      <button onclick="appendValue('-')">-</button>
+      <button onclick="appendValue('1')">1</button>
+      <button onclick="appendValue('2')">2</button>
+      <button onclick="appendValue('3')">3</button>
+      <button onclick="appendValue('+')">+</button>
+      <button onclick="appendValue('0')">0</button>
+      <button onclick="appendValue('.')">.</button>
+      <button class="equal" onclick="calculateResult()">=</button>
+    </div>
+  </div>
+  <div class="bleach">
+    <p>B</p>
+    <p>L</p>
+    <p>E</p>
+    <p>A</p>
+    <p>C</p>
+    <p>H</p>
+  </div>
+  <div class="cal">
+    <p>C</p>
+    <p>A</p>
+    <p>L</p>
+    <p>C</p>
+    <p>U</p>
+    <p>L</p>
+    <p>A</p>
+    <p>T</p>
+    <p>O</p>
+    <p>R</p>
+  </div>
+  <script>
+    let result = document.getElementById("result");
+    function appendValue(value) {
+      result.value += value;
+    }
+    function clearResult() {
+      result.value = "";
+    }
+    function deleteChar() {
+      result.value = result.value.slice(0, -1);
+    }
+    function calculateResult() {
+      try {
+        result.value = eval(result.value);
+      } catch (e) {
+        result.value = "Error";
+      }
+    }
+  </script>
+</body>
+</html>
