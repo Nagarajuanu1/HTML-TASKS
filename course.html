@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Department of Computer Science | ABC College</title>
+
+  <!-- ===== SIMPLE STYLES ===== -->
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0;font-family:Arial,Helvetica,sans-serif}
+    body{background:#f5f7fa;color:#333;line-height:1.6}
+    h1,h2,h3{color:#003366}
+    a{text-decoration:none;color:inherit}
+
+    /* ---- NAV ---- */
+    nav{position:sticky;top:0;background:#003366;color:#fff;box-shadow:0 2px 6px rgba(0,0,0,.2);z-index:100}
+    .nav-content{max-width:1100px;margin:auto;display:flex;align-items:center;justify-content:space-between;padding:1rem 1.5rem}
+    .logo{font-size:1.4rem;font-weight:bold}
+    .links{display:flex;gap:1.2rem}
+    .links a:hover{color:#ff6f00}
+
+    /* ---- HERO ---- */
+    .hero{background:linear-gradient(135deg,#003366 0%,#0066cc 100%);color:#fff;padding:3.5rem 1.5rem;text-align:center}
+    .hero h1{font-size:2.2rem;margin-bottom:.5rem}
+    .hero p{font-size:1.1rem;max-width:600px;margin:auto}
+
+    /* ---- SECTIONS ---- */
+    section{max-width:1100px;margin:3rem auto;padding:0 1.5rem}
+    .section-title{text-align:center;margin-bottom:2rem;font-size:1.8rem;position:relative}
+    .section-title::after{content:"";width:60px;height:3px;background:#ff6f00;position:absolute;bottom:-8px;left:50%;transform:translateX(-50%)}
+
+    /* ---- COURSES TABLE ---- */
+    .course-table{width:100%;border-collapse:collapse;background:#fff;border-radius:6px;overflow:hidden;box-shadow:0 2px 6px rgba(0,0,0,.08)}
+    .course-table th,.course-table td{padding:.75rem 1rem;text-align:left;border-bottom:1px solid #e0e0e0}
+    .course-table th{background:#003366;color:#fff}
+
+    /* ---- FACULTY GRID ---- */
+    .faculty-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.8rem}
+    .faculty-card{background:#fff;padding:1.5rem;border-radius:6px;box-shadow:0 2px 6px rgba(0,0,0,.08);text-align:center}
+    .faculty-card img{width:100px;height:100px;border-radius:50%;background:#cfd8dc;margin:0 auto 1rem}
+    .faculty-card h4{margin-bottom:.3rem}
+    .faculty-card .role{color:#555;font-size:.9rem;margin-bottom:.5rem}
+    .faculty-card .qual{font-size:.8rem;color:#666}
+
+    /* ---- FOOTER ---- */
+    footer{background:#003366;color:#fff;text-align:center;padding:1.5rem;font-size:.9rem;margin-top:3rem}
+
+    /* ---- RESPONSIVE ---- */
+    @media(max-width:600px){.links{flex-direction:column;gap:.5rem}}
+  </style>
+</head>
+
+<body>
+  <!-- ===== NAV ===== -->
+  <nav>
+    <div class="nav-content">
+      <div class="logo">ABC College | Dept. of Computer Science</div>
+      <div class="links">
+        <a href="#courses">Courses</a>
+        <a href="#faculty">Faculty</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <header class="hero">
+    <h1>Department of Computer Science</h1>
+    <p>Offering industry-aligned programmes and research opportunities since 1995.</p>
+  </header>
+
+  <!-- ===== COURSES OFFERED ===== -->
+  <section id="courses">
+    <h2 class="section-title">Courses Offered</h2>
+    <table class="course-table">
+      <thead>
+        <tr><th>Programme</th><th>Duration</th><th>Intake</th><th>Key Subjects</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>B.Sc. Computer Science</td><td>3 years</td><td>60</td><td>Programming, DBMS, Networks</td></tr>
+        <tr><td>B.C.A. (Bachelor of Computer Applications)</td><td>3 years</td><td>60</td><td>Java, Web Dev, Mobile Apps</td></tr>
+        <tr><td>M.Sc. Computer Science</td><td>2 years</td><td>25</td><td>AI, ML, Data Science</td></tr>
+        <tr><td>M.C.A. (Master of Computer Applications)</td><td>2 years</td><td>30</td><td>Advanced Java, Cloud, Cyber Sec</td></tr>
+        <tr><td>Ph.D. Computer Science</td><td>3-5 years</td><td>As per guide availability</td><td>Research in AI, IoT, Blockchain</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- ===== FACULTY LIST ===== -->
+  <section id="faculty">
+    <h2 class="section-title">Faculty List</h2>
+    <div class="faculty-grid">
+      <!-- 1 -->
+      <div class="faculty-card">
+        <img src="https://via.placeholder.com/100x100/0288d1/ffffff?text=DR" alt="Dr Ramesh">
+        <h4>Dr. K. Ramesh</h4>
+        <div class="role">Professor & HOD</div>
+        <div class="qual">Ph.D. (IIT Madras), 22 yrs exp</div>
+      </div>
+      <!-- 2 -->
+      <div class="faculty-card">
+        <img src="https://via.placeholder.com/100x100/7b1fa2/ffffff?text=PS" alt="Prof Sita">
+        <h4>Prof. P. Sita</h4>
+        <div class="role">Associate Professor</div>
+        <div class="qual">M.Tech, Ph.D. ( pursuing ), 18 yrs</div>
+      </div>
+      <!-- 3 -->
+      <div class="faculty-card">
+        <img src="https://via.placeholder.com/100x100/f57c00/ffffff?text=AK" alt="Asst Kiran">
+        <h4>Dr. A. Kiran Kumar</h4>
+        <div class="role">Assistant Professor</div>
+        <div class="qual">Ph.D. (Anna Univ), 12 yrs</div>
+      </div>
+      <!-- 4 -->
+      <div class="faculty-card">
+        <img src="https://via.placeholder.com/100x100/388e3c/ffffff?text=MS" alt="Maya">
+        <h4>Mrs. Maya Singh</h4>
+        <div class="role">Assistant Professor</div>
+        <div class="qual">M.C.A., M.Phil, 10 yrs</div>
+      </div>
+      <!-- 5 -->
+      <div class="faculty-card">
+        <img src="https://via.placeholder.com/100x100/1976d2/ffffff?text=NB" alt="Nitin">
+        <h4>Mr. Nitin B.</h4>
+        <div class="role">Assistant Professor</div>
+        <div class="qual">M.Tech (CSE), 8 yrs</div>
+      </div>
+      <!-- 6 -->
+      <div class="faculty-card">
+        <img src="https://via.placeholder.com/100x100/5e35b1/ffffff?text=SS" alt="Swati">
+        <h4>Ms. Swati S.</h4>
+        <div class="role">Assistant Professor</div>
+        <div class="qual">M.Sc. CS, UGC-NET, 6 yrs</div>
+      </div>
+      <!-- 7 -->
+      <div class="faculty-card">
+        <img src="https://via.placeholder.com/100x100/e91e63/ffffff?text=RV" alt="Ravi">
+        <h4>Mr. Ravi T.</h4>
+        <div class="role">Lab Instructor</div>
+        <div class="qual">B.E. (CSE), pursuing M.Tech, 5 yrs</div>
+      </div>
+      <!-- 8 -->
+      <div class="faculty-card">
+        <img src="https://via.placeholder.com/100x100/00acc1/ffffff?text=AP" alt="Anu">
+        <h4>Ms. Anu P.</h4>
+        <div class="role">Guest Faculty</div>
+        <div class="qual">M.C.A., 4 yrs industry + 3 yrs teaching</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT / FOOTER ===== -->
+  <section id="contact">
+    <div style="text-align:center;margin-bottom:2rem">
+      <h3>Contact Us</h3>
+      <p><strong>Address:</strong> ABC College, IT Block, Ring Road, Chennai – 600 025</p>
+      <p><strong>Phone:</strong> +91-44-2233 4455 | <strong>Email:</strong> cs@abccollege.edu</p>
+    </div>
+  </section>
+
+  <footer>
+    © 2025 Department of Computer Science, ABC College. All rights reserved.
+  </footer>
+
+  <!-- ===== tiny JS ===== -->
+  <script>
+    function scrollToSection(id) {
+      document.getElementById(id).scrollIntoView({behavior:'smooth'});
+    }
+  </script>
+</body>
+</html>

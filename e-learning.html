@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EduLite – Learn Anything, Anywhere</title>
+
+  <!-- ========== SIMPLE STYLES ========== -->
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0;font-family:Arial,Helvetica,sans-serif}
+    body{background:#f5f7fa;color:#333;line-height:1.6}
+    h1,h2,h3{color:#003366}
+    a{text-decoration:none;color:inherit}
+
+    /* ---- NAV ---- */
+    nav{position:sticky;top:0;background:#fff;box-shadow:0 2px 8px rgba(0,0,0,.08);z-index:100}
+    .nav-content{max-width:1100px;margin:auto;display:flex;align-items:center;justify-content:space-between;padding:1rem 1.5rem}
+    .logo{font-size:1.5rem;font-weight:bold;color:#003366}
+    .links{display:flex;gap:1.2rem}
+    .links a:hover{color:#ff6f00}
+
+    /* ---- HERO ---- */
+    .hero{background:linear-gradient(135deg,#003366 0%,#0066cc 100%);color:#fff;padding:4rem 1.5rem;text-align:center}
+    .hero h1{font-size:2.5rem;margin-bottom:1rem;color:#fff}
+    .hero p{font-size:1.1rem;max-width:600px;margin:0 auto 2rem}
+    .btn{background:#ff6f00;color:#fff;padding:.75rem 1.8rem;border:none;border-radius:4px;font-size:1rem;cursor:pointer;transition:background .3s}
+    .btn:hover{background:#e65100}
+
+    /* ---- SECTIONS ---- */
+    section{max-width:1100px;margin:3rem auto;padding:0 1.5rem}
+    .section-title{text-align:center;margin-bottom:2rem;font-size:2rem}
+
+    /* ---- COURSES GRID ---- */
+    .courses{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1.5rem}
+    .course-card{background:#fff;border-radius:6px;box-shadow:0 2px 6px rgba(0,0,0,.08);overflow:hidden;transition:transform .3s}
+    .course-card:hover{transform:translateY(-5px)}
+    .course-card img{width:100%;height:140px;object-fit:cover;background:#cfd8dc}
+    .course-info{padding:1rem}
+    .course-info h4{margin-bottom:.5rem;font-size:1.1rem}
+    .course-info p{font-size:.9rem;color:#555;margin-bottom:1rem}
+    .tag{background:#e0e0e0;font-size:.75rem;padding:.2rem .5rem;border-radius:3px;margin-right:.3rem}
+
+    /* ---- DETAILS / INSTRUCTOR ---- */
+    .detail-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:2rem;align-items:start}
+    .detail-card,.instructor-card{background:#fff;padding:1.5rem;border-radius:6px;box-shadow:0 2px 6px rgba(0,0,0,.08)}
+    .instructor-card img{width:90px;height:90px;border-radius:50%;background:#cfd8dc;margin-bottom:1rem}
+
+    /* ---- ENROL BOX ---- */
+    .enrol-box{background:#fff7e6;border:2px solid #ff6f00;border-radius:6px;padding:1.5rem;text-align:center}
+    .enrol-box h3{margin-bottom:1rem}
+
+    /* ---- FOOTER ---- */
+    footer{background:#003366;color:#fff;text-align:center;padding:1.5rem;margin-top:3rem;font-size:.9rem}
+
+    /* ---- RESPONSIVE ---- */
+    @media(max-width:600px){.links{flex-direction:column;gap:.5rem}}
+  </style>
+</head>
+
+<!-- ========== CONTENT ========== -->
+<body>
+  <!-- NAV -->
+  <nav>
+    <div class="nav-content">
+      <div class="logo">EduLite</div>
+      <div class="links">
+        <a href="#courses">Courses</a>
+        <a href="#details">Details</a>
+        <a href="#instructor">Instructor</a>
+        <a href="#enrol">Enrol</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header class="hero">
+    <h1>Learn Anything, Anywhere</h1>
+    <p>High-quality online courses built by industry experts. Start your journey today.</p>
+    <button class="btn" onclick="scrollToSection('courses')">Explore Courses</button>
+  </header>
+
+  <!-- AVAILABLE COURSES -->
+  <section id="courses">
+    <h2 class="section-title">Available Courses</h2>
+    <div class="courses">
+      <!-- Course 1 -->
+      <div class="course-card">
+        <img src="https://via.placeholder.com/400x140/0288d1/ffffff?text=Web+Development" alt="Web Dev">
+        <div class="course-info">
+          <h4>Complete Web Development</h4>
+          <p>HTML, CSS, JavaScript, React, Node & MongoDB in one comprehensive course.</p>
+          <div>
+            <span class="tag">12 weeks</span><span class="tag">Beginner → Pro</span>
+          </div>
+        </div>
+      </div>
+      <!-- Course 2 -->
+      <div class="course-card">
+        <img src="https://via.placeholder.com/400x140/7b1fa2/ffffff?text=Data+Science" alt="Data Science">
+        <div class="course-info">
+          <h4>Data Science with Python</h4>
+          <p>Master pandas, numpy, sklearn & build real-world ML projects.</p>
+          <div>
+            <span class="tag">10 weeks</span><span class="tag">Intermediate</span>
+          </div>
+        </div>
+      </div>
+      <!-- Course 3 -->
+      <div class="course-card">
+        <img src="https://via.placeholder.com/400x140/f57c00/ffffff?text=UI+UX+Design" alt="Design">
+        <div class="course-info">
+          <h4>UI / UX Design Fundamentals</h4>
+          <p>Learn Figma, wire-framing, user research & create stunning interfaces.</p>
+          <div>
+            <span class="tag">6 weeks</span><span class="tag">Beginner</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COURSE DETAILS -->
+  <section id="details">
+    <h2 class="section-title">Course Details</h2>
+    <div class="detail-grid">
+      <div class="detail-card">
+        <h3>Self-Paced Learning</h3>
+        <p>Access video lectures 24/7, study at your own speed and revisit content anytime.</p>
+      </div>
+      <div class="detail-card">
+        <h3>Real-World Projects</h3>
+        <p>Build portfolio-worthy projects with guided walkthroughs and downloadable resources.</p>
+      </div>
+      <div class="detail-card">
+        <h3>Certificate of Completion</h3>
+        <p>Receive a verifiable digital certificate after finishing all modules and quizzes.</p>
+      </div>
+      <div class="detail-card">
+        <h3>Lifetime Access</h3>
+        <p>Pay once, own the course forever — including future updates and bonus content.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- INSTRUCTOR INFO -->
+  <section id="instructor">
+    <h2 class="section-title">Meet Your Instructor</h2>
+    <div class="detail-grid">
+      <div class="instructor-card">
+        <img src="https://via.placeholder.com/150x150/546e7a/ffffff?text=AD" alt="Alex Doe">
+        <h3>Alex Doe</h3>
+        <p><strong>Full-Stack Developer | 10+ yrs Exp</strong></p>
+        <p>Alex has built products used by millions and loves teaching in simple terms. When not coding, he's speaking at tech conferences or contributing to open-source.</p>
+      </div>
+      <div class="instructor-card">
+        <img src="https://via.placeholder.com/150x150/7e57c2/ffffff?text=SJ" alt="Sarah John">
+        <h3>Dr. Sarah John</h3>
+        <p><strong>Data Scientist | PhD AI/ML</strong></p>
+        <p>Sarah has published 30+ research papers and mentored hundreds of students. Her goal: make data science intuitive and fun.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ENROLMENT MESSAGE -->
+  <section id="enrol">
+    <div class="enrol-box">
+      <h3>Ready to Start Learning?</h3>
+      <p>Join thousands of learners alread<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EduLite – Learn Anything, Anywhere</title>
+
+  <!-- ========== SIMPLE STYLES ========== -->
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0;font-family:Arial,Helvetica,sans-serif}
+    body{background:#f5f7fa;color:#333;line-height:1.6}
+    h1,h2,h3{color:#003366}
+    a{text-decoration:none;color:inherit}
+
+    /* ---- NAV ---- */
+    nav{position:sticky;top:0;background:#fff;box-shadow:0 2px 8px rgba(0,0,0,.08);z-index:100}
+    .nav-content{max-width:1200px;margin:auto;display:flex;align-items:center;justify-content:space-between;padding:1rem 1.5rem}
+    .logo{font-size:1.5rem;font-weight:bold;color:#003366}
+    .links{display:flex;gap:1.2rem}
+    .links a:hover{color:#ff6f00}
+
+    /* ---- HERO ---- */
+    .hero{background:linear-gradient(135deg,#003366 0%,#0066cc 100%);color:#fff;padding:4rem 1.5rem;text-align:center}
+    .hero h1{font-size:2.5rem;margin-bottom:1rem;color:#fff}
+    .hero p{font-size:1.1rem;max-width:600px;margin:0 auto 2rem}
+    .btn{background:#ff6f00;color:#fff;padding:.75rem 1.8rem;border:none;border-radius:4px;font-size:1rem;cursor:pointer;transition:background .3s}
+    .btn:hover{background:#e65100}
+
+    /* ---- SECTIONS ---- */
+    section{max-width:1200px;margin:3rem auto;padding:0 1.5rem}
+    .section-title{text-align:center;margin-bottom:2rem;font-size:2rem}
+
+    /* ---- COURSES GRID ---- */
+    .courses{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1.5rem}
+    .course-card{background:#fff;border-radius:6px;box-shadow:0 2px 6px rgba(0,0,0,.08);overflow:hidden;transition:transform .3s}
+    .course-card:hover{transform:translateY(-5px)}
+    .course-card img{width:100%;height:140px;object-fit:cover;background:#cfd8dc}
+    .course-info{padding:1rem}
+    .course-info h4{margin-bottom:.5rem;font-size:1.1rem}
+    .course-info p{font-size:.9rem;color:#555;margin-bottom:1rem}
+    .tag{background:#e0e0e0;font-size:.75rem;padding:.2rem .5rem;border-radius:3px;margin-right:.3rem}
+
+    /* ---- DETAILS / INSTRUCTOR ---- */
+    .detail-grid,.instructor-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:2rem;align-items:start}
+    .detail-card,.instructor-card{background:#fff;padding:1.5rem;border-radius:6px;box-shadow:0 2px 6px rgba(0,0,0,.08)}
+    .instructor-card img{width:90px;height:90px;border-radius:50%;background:#cfd8dc;margin-bottom:1rem}
+
+    /* ---- ENROL BOX ---- */
+    .enrol-box{background:#fff7e6;border:2px solid #ff6f00;border-radius:6px;padding:1.5rem;text-align:center}
+    .enrol-box h3{margin-bottom:1rem}
+
+    /* ---- FOOTER ---- */
+    footer{background:#003366;color:#fff;text-align:center;padding:1.5rem;margin-top:3rem;font-size:.9rem}
+
+    /* ---- RESPONSIVE ---- */
+    @media(max-width:600px){.links{flex-direction:column;gap:.5rem}}
+  </style>
+</head>
+
+<body>
+  <!-- NAV -->
+  <nav>
+    <div class="nav-content">
+      <div class="logo">EduLite</div>
+      <div class="links">
+        <a href="#courses">Courses</a>
+        <a href="#details">Details</a>
+        <a href="#instructor">Instructors</a>
+        <a href="#enrol">Enrol</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header class="hero">
+    <h1>Learn Anything, Anywhere</h1>
+    <p>High-quality online courses built by industry experts. Start your journey today.</p>
+    <button class="btn" onclick="scrollToSection('courses')">Explore 10+ Courses</button>
+  </header>
+
+  <!-- 10+ AVAILABLE COURSES -->
+  <section id="courses">
+    <h2 class="section-title">10+ Available Courses</h2>
+    <div class="courses">
+      <!-- 1 -->
+      <div class="course-card">
+        <img src="https://via.placeholder.com/400x140/0288d1/ffffff?text=Web+Development" alt="Web Dev">
+        <div class="course-info"><h4>Complete Web Development</h4><p>HTML, CSS, JS, React, Node, MongoDB.</p><div><span class="tag">12 wk</span><span class="tag">Beginner</span></div></div>
+      </div>
+      <!-- 2 -->
+      <div class="course-card">
+        <img src="https://via.placeholder.com/400x140/7b1fa2/ffffff?text=Data+Science" alt="DS">
+        <div class="course-info"><h4>Data Science with Python</h4><p>Pandas, Numpy, Sklearn, ML projects.</p><div><span class="tag">10 wk</span><span class="tag">Inter</span></div></div>
+      </div>
+      <!-- 3 -->
+      <div class="course-card">
+        <img src="https://via.placeholder.com/400x140/f57c00/ffffff?text=UI+UX" alt="UX">
+        <div class="course-info"><h4>UI/UX Design Fundamentals</h4><p>Figma, wire-framing, user research.</p><div><span class="tag">6 wk</span><span class="tag">Beginner</span></div></div>
+      </div>
+      <!-- 4 -->
+      <div class="course-card">
+        <img src="https://via.placeholder.com/400x140/388e3c/ffffff?text=Digital+Marketing" alt="DM">
+        <div class="course-info"><h4>Digital Marketing Masterclass</h4><p>SEO, SEM, Social Ads, Analytics.</p><div><span class="tag">8 wk</span><span class="tag">Beginner</span></div></div>
+      </div>
+      <!-- 5 -->
+      <div class="course-card">
+        <img src="https://via.placeholder.com/400x140/1976d2/ffffff?text=Cloud+Computing" alt="Cloud">
+        <div class="course-info"><h4>AWS Cloud Practitioner</h4><p>EC2, S3, RDS, VPC, cost optimization.</p><div><span class="tag">9 wk</span><span class="tag">Inter</span></div></div>
+      </div>
+      <!-- 6 -->
+      <div class="course-card">
+        <img src="https://via.placeholder.com/400x140/5e35b1/ffffff?text=Cybersecurity" alt="Cyber">
+        <div class="course-info"><h4>Cybersecurity Essentials</h4><p>Ethical hacking, firewalls, incident resp.</p><div><span class="tag">10 wk</span><span class="tag">Inter</span></div></div>
+      </div>
+      <!-- 7 -->
+      <div class="course-card">
+        <img src="https://via.placeholder.com/400x140/e91e63/ffffff?text=Mobile+Development" alt="Mobile">
+        <div class="course-info"><h4>Flutter Mobile Development</h4><p>Build iOS & Android apps with one code-base.</p><div><span class="tag">8 wk</span><span class="tag">Inter</span></div></div>
+      </div>
+      <!-- 8 -->
+      <div class="course-card">
+        <img src="https://via.placeholder.com/400x140/00acc1/ffffff?text=Blockchain" alt="Block">
+        <div class="course-info"><h4>Blockchain & Solidity</h4><p>Smart contracts, DeFi, ERC-20 tokens.</p><div><span class="tag">7 wk</span><span class="tag">Adv</span></div></div>
+      </div>
+      <!-- 9 -->
+      <div class="course-card">
+        <img src="https://via.placeholder.com/400x140/ffa000/ffffff?text=Excel+Analytics" alt="Excel">
+        <div class="course-info"><h4>Advanced Excel Analytics</h4><p>PowerQuery, PivotTables, VBA macros.</p><div><span class="tag">4 wk</span><span class="tag">Beginner</span></div></div>
+      </div>
+      <!-- 10 -->
+      <div class="course-card">
+        <img src="https://via.placeholder.com/400x140/546e7a/ffffff?text=Soft+Skills" alt="Soft">
+        <div class="course-info"><h4>Soft-Skills Bootcamp</h4><p>Communication, teamwork, time-management.</p><div><span class="tag">3 wk</span><span class="tag">Beginner</span></div></div>
+      </div>
+      <!-- 11 -->
+      <div class="course-card">
+        <img src="https://via.placeholder.com/400x140/8e24aa/ffffff?text=Python+Automation" alt="Auto">
+        <div class="course-info"><h4>Python Automation</h4><p>Selenium, openpyxl, scheduling, APIs.</p><div><span class="tag">5 wk</span><span class="tag">Inter</span></div></div>
+      </div>
+      <!-- 12 -->
+      <div class="course-card">
+        <img src="https://via.placeholder.com/400x140/039be5/ffffff?text=Linux+Admin" alt="Linux">
+        <div class="course-info"><h4>Linux System Admin</h4><p>Command line, bash scripting, server setup.</p><div><span class="tag">6 wk</span><span class="tag">Inter</span></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 10+ DETAIL HIGHLIGHTS -->
+  <section id="details">
+    <h2 class="section-title">10+ Platform Highlights</h2>
+    <div class="detail-grid">
+      <div class="detail-card"><h3>1. Self-Paced Learning</h3><p>24/7 access, revisit forever.</p></div>
+      <div class="detail-card"><h3>2. Real-World Projects</h3><p>Build portfolio assets guided by mentors.</p></div>
+      <div class="detail-card"><h3>3. Completion Certificate</h3><p>Shareable, verifiable, blockchain-ready.</p></div>
+      <div class="detail-card"><h3>4. Lifetime Access</h3><p>Pay once, own forever plus updates.</p></div>
+      <div class="detail-card"><h3>5. Live Doubt Sessions</h3><p>Weekly Zoom Q&A with instructors.</p></div>
+      <div class="detail-card"><h3>6. Mobile & TV Apps</h3><p>Learn on the go or cast to TV.</p></div>
+      <div class="detail-card"><h3>7. Coding Sandboxes</h3><p>Browser-based labs, no install needed.</p></div>
+      <div class="detail-card"><h3>8. Quizzes & Challenges</h3><p>Auto-graded, instant feedback.</p></div>
+      <div class="detail-card"><h3>9. Community Forum</h3><p>Peer help, networking, job board.</p></div>
+      <div class="detail-card"><h3>10. Money-Back Guarantee</h3><p>30-day no-questions-asked refund.</p></div>
+      <div class="detail-card"><h3>11. Industry Templates</h3><p>Resume, portfolio, pitch-deck files.</p></div>
+      <div class="detail-card"><h3>12. Source Code Repo</h3><p>GitHub access for every project.</p></div>
+    </div>
+  </section>
+
+  <!-- 10+ INSTRUCTORS -->
+  <section id="instructor">
+    <h2 class="section-title">10+ Expert Instructors</h2>
+    <div class="instructor-grid">
+      <div class="instructor-card">
+        <img src="https://via.placeholder.com/150x150/0288d1/ffffff?text=AD" alt="Alex Doe">
+        <h3>Alex Doe</h3><p><strong>Full-Stack Lead | 10 yrs</strong></p><p>React, Node, MongoDB guru; ex-Google.</p>
+      </div>
+      <div class="instructor-card">
+        <img src="https://via.placeholder.com/150x150/7b1fa2/ffffff?text=SJ" alt="Sarah John">
+        <h3>Dr. Sarah John</h3><p><strong>Data Scientist | PhD AI/ML</strong></p><p>30+ papers, ex-Amazon AI researcher.</p>
+      </div>
+      <div class="instructor-card">
+        <img src="https://via.placeholder.com/150x150/f57c00/ffffff?text=RK" alt="Rahul Krish">
+        <h3>Rahul Krish</h3><p><strong>UI/UX Expert | 8 yrs</strong></p><p>Designed 50+ apps, Figma community hero.</p>
+      </div>
+      <div class="instructor-card">
+        <img src="https://via.placeholder.com/150x150/388e3c/ffffff?text=MP" alt="Maya Patel">
+        <h3>Maya Patel</h3><p><strong>Digital Marketer | 7 yrs</strong></p><p>Google Ads certified, ROI ninja.</p>
+      </div>
+      <div class="instructor-card">
+        <img src="https://via.placeholder.com/150x150/1976d2/ffffff?text=KC" alt="Kunal Cloud">
+        <h3>Kunal Cloud</h3><p><strong>AWS Solutions Architect | 9 yrs</strong></p><p>Certified trainer, 20k+ students taught.</p>
+      </div>
+      <div class="instructor-card">
+        <img src="https://via.placeholder.com/150x150/5e35b1/ffffff?text=NC" alt="Nina Cyber">
+        <h3>Nina Cyber</h3><p><strong>Ethical Hacker | CEH, OSCP</strong></p><p>Bug-bounty hall-of-famer, ex-IBM Security.</p>
+      </div>
+      <div class="instructor-card">
+        <img src="https://via.placeholder.com/150x150/e91e63/ffffff?text=TM" alt="Tom Mobile">
+        <h3>Tom Mobile</h3><p><strong>Flutter GDE | 6 yrs</strong></p><p>Google Developer Expert, open-source contributor.</p>
+      </div>
+      <div class="instructor-card">
+        <img src="https://via.placeholder.com/150x150/00acc1/ffffff?text=BC" alt="Bob Chain">
+        <h3>Bob Chain</h3><p><strong>Blockchain Dev | Solidity Lead</strong></p><p>Audited 100+ smart contracts, ex-Ethereum Foundation.</p>
+      </div>
+      <div class="instructor-card">
+        <img src="https://via.placeholder.com/150x150/ffa000/ffffff?text=VE" alt="Vera Excel">
+        <h3>Vera Excel</h3><p><strong>Finance Analyst | FMVA</strong></p><p>Built financial models for Fortune 500.</p>
+      </div>
+      <div class="instructor-card">
+        <img src="https://via.placeholder.com/150x150/546e7a/ffffff?text=SS" alt="Sam Soft">
+        <h3>Sam Soft</h3><p><strong>Soft-Skills Coach | ICF PCC</strong></p><p>Trained 5k+ professionals across 3 continents.</p>
+      </div>
+      <div class="instructor-card">
+        <img src="https://via.placeholder.com/150x150/8e24aa/ffffff?text=AP" alt="Ana Python">
+        <h3>Ana Python</h3><p><strong>Automation Expert | 7 yrs</strong></p><p>Saved clients 10k+ hrs with Python scripts.</p>
+      </div>
+      <div class="instructor-card">
+        <img src="https://via.placeholder.com/150x150/039be5/ffffff?text=LX" alt="Linus Linux">
+        <h3>Linus Linux</h3><p><strong>Linux Admin | RHCA</strong></p><p>Maintains 200+ servers, author of LinuxQuickTips.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ENROL MESSAGE -->
+  <section id="enrol">
+    <div class="enrol-box">
+      <h3>Ready to Start Learning?</h3>
+      <p>Join thousands of learners already benefiting from our 12+ courses. Enrol today and get instant access to all content.</p>
+      <br />
+      <button class="btn" onclick="alert('Redirecting to secure enrolment page...')">Enrol Now - ₹1,999</button>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    © 2025 EduLite. All rights reserved.
+  </footer>
+
+  <!-- tiny JS helper -->
+  <script>
+    function scrollToSection(id) {
+      document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+    }
+  </script>
+</body>
+</html>y benefiting from our courses. Enrol today and get instant access to all content.</p>
+      <br />
+      <button class="btn" onclick="alert('Redirecting to secure enrolment page...')">Enrol Now - ₹1,999</button>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    © 2025 EduLite. All rights reserved.
+  </footer>
+
+  <!-- ========== tiny JS ========== -->
+  <script>
+    function scrollToSection(id) {
+      document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+    }
+  </script>
+</body>
+</html>
